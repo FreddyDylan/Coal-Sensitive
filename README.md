@@ -63,10 +63,10 @@ The observed bulk and effective-background curves are interpolated before subtra
 
 ### Network solution and contribution analysis
 
-Let $B$ be the node–edge incidence matrix, $G=\operatorname{diag}(g_e)$, and $Y$ the three harmonic-coordinate solutions. The solver imposes the spatial coordinates on the exterior boundary and solves flow conservation at interior nodes. With $Z=B^T Y$, viscosity $\mu$, and sample volume $V$,
+Let $B$ be the node–edge incidence matrix, $G=\mathrm{diag}(g_e)$, and $Y$ the three harmonic-coordinate solutions. The solver imposes the spatial coordinates on the exterior boundary and solves flow conservation at interior nodes. With $Z=B^T Y$, viscosity $\mu$, and sample volume $V$,
 
 $$\mathbf K=\frac{\mu}{V}Z^T G Z, \qquad
-\frac{\partial\mathbf K}{\partial\sigma}=-\frac{\mu}{V}Z^T\operatorname{diag}(g_e c_e)Z.$$
+\frac{\partial\mathbf K}{\partial\sigma}=-\frac{\mu}{V}Z^T\mathrm{diag}(g_e c_e)Z.$$
 
 For a unit direction $\mathbf d$, define $K_d=\mathbf d^T\mathbf K\mathbf d$. The directional log sensitivity is
 
