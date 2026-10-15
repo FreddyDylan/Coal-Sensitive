@@ -11,7 +11,7 @@ from scipy import sparse
 from scipy.sparse.csgraph import connected_components
 from scipy.sparse.linalg import splu, cg
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 class ModelInputError(ValueError):
     """An input violates the model's geometry or response requirements."""

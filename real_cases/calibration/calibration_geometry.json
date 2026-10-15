@@ -1,0 +1,68 @@
+{
+  "schema": "rev55-stress-calibration-geometry-v1",
+  "source": "revised 2026-10-07 stress results and reviewed experiment conditions",
+  "reference_stress_MPa": 3.7,
+  "maximum_stress_MPa": 20.0,
+  "note": "First-loading calibration interval common to BX-2/BX-4/BX-8 and the BX-5 control.",
+  "background_reference": {
+    "sample": "BX-5",
+    "preparation": "axially_split_reclosed_unfilled",
+    "label": "split/reclosed unfilled control",
+    "intact_matrix_measurement_available": false,
+    "model_role": "effective_background_proxy",
+    "model_assumption": "The split/reclosed BX-5 control curve approximates the non-fracture-region response; the test conditions of the reported pre-split 0.0025 mD value are pending verification and were not used for calibration; the intact-matrix stress response was not separately identified.",
+    "source": "stress experiment detail checklist 0929 (internal document), item 1"
+  },
+  "model_assumptions": [
+    "one centered axial split plane, based on confirmed half-core preparation",
+    "parallel axial effective background and effective filled-fracture flow",
+    "the BX-5 split/reclosed/unfilled specimen response is an effective background proxy, not an independently measured intact matrix law"
+  ],
+  "samples": {
+    "BX-2": {
+      "confirmed": true,
+      "cross_section": "circular",
+      "specimen_shape": "cylinder",
+      "diameter_mm": 24.78,
+      "width_is_diameter": true,
+      "specimen_length_mm": 49.95,
+      "specimen_axial_direction": "Z",
+      "fracture_arrangement": "single_centered_axial_through",
+      "fracture_position_source": "user-confirmed axial halving",
+      "aperture_mm": 0.25,
+      "aperture_basis": "nominal value, experiment records",
+      "fracture_area_fraction": 0.01284521736555927,
+      "description": "BX-2 (length 4.995 cm, diameter 2.478 cm, 0.25 mm aperture, 63% mineral fill, no proppant)"
+    },
+    "BX-4": {
+      "confirmed": true,
+      "cross_section": "circular",
+      "specimen_shape": "cylinder",
+      "diameter_mm": 24.81,
+      "width_is_diameter": true,
+      "specimen_length_mm": 50.0,
+      "specimen_axial_direction": "Z",
+      "fracture_arrangement": "single_centered_axial_through",
+      "fracture_position_source": "user-confirmed axial halving",
+      "aperture_mm": 0.25,
+      "aperture_basis": "nominal value, experiment records",
+      "fracture_area_fraction": 0.012829685585239281,
+      "description": "BX-4 (length 5.0 cm, diameter 2.481 cm, 0.25 mm aperture, 63% mineral fill, with proppant)"
+    },
+    "BX-8": {
+      "confirmed": true,
+      "cross_section": "circular",
+      "specimen_shape": "cylinder",
+      "diameter_mm": 26.01,
+      "width_is_diameter": true,
+      "specimen_length_mm": 50.02,
+      "specimen_axial_direction": "Z",
+      "fracture_arrangement": "single_centered_axial_through",
+      "fracture_position_source": "user-confirmed axial halving",
+      "aperture_mm": 0.42,
+      "aperture_basis": "design value",
+      "fracture_area_fraction": 0.020558914587451096,
+      "description": "BX-8 (length 5.002 cm, diameter 2.601 cm, 0.42 mm design aperture, 37% mineral fill, with proppant)"
+    }
+  }
+}

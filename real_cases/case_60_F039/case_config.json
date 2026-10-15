@@ -1,0 +1,73 @@
+{
+  "schema": "coal-sensitive-real-case-v1",
+  "roi_id": "60/F039",
+  "core_mm": 60,
+  "material": "BX-2",
+  "spacing_m": 4.526506805419922e-05,
+  "edge_length_mm": 0.9053013610839844,
+  "volume_m3": 7.419583383850357e-10,
+  "voxel_counts": {
+    "0": 7863,
+    "39": 118,
+    "1000000": 19
+  },
+  "reference_stress_MPa": 3.7,
+  "stress_path_MPa": [
+    3.7,
+    5.0,
+    5.25,
+    7.0,
+    7.25,
+    10.0,
+    10.25,
+    15.0,
+    15.75,
+    20.0
+  ],
+  "directions": {
+    "x": [
+      1,
+      0,
+      0
+    ],
+    "y": [
+      0,
+      1,
+      0
+    ],
+    "z": [
+      0,
+      0,
+      1
+    ]
+  },
+  "phases": {
+    "0": {
+      "class": "BX-5",
+      "fracture_id": null,
+      "description": "ordinary background voxels; effective background response"
+    },
+    "1000000": {
+      "class": "BX-5",
+      "fracture_id": null,
+      "description": "unresolved high-gray voxels; assigned the effective background response with no fracture ownership"
+    },
+    "39": {
+      "class": "BX-2",
+      "fracture_id": "F039",
+      "description": "resolved fracture F039 (physical CT fracture identifier 39)"
+    }
+  },
+  "calibration": {
+    "fracture_area_fraction": 0.01284521736555927,
+    "background_reference_K_mD": 0.4547499294402665,
+    "fracture_reference_K_mD": 21725.981285013204,
+    "contrast": 47775.66719307652
+  },
+  "provenance": {
+    "label_file": "labels.npy",
+    "label_sha256": "b691d64d0bd34dc3e532fe96ab37fa543e12e933759af7a1add819d917150401",
+    "internal_result_sha256": "4dd01e9d89279858291638af31cea64c3c52c854be49e4bf5c01175f38511e31",
+    "note": "labels.npy is byte-identical to the label volume used in the internal 212-ROI recomputation (2026-10-08). The result tables in this folder were exported from the internal per-case result file; run_real_cases.py reproduces them with the released code."
+  }
+}

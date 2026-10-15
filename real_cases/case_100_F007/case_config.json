@@ -1,0 +1,85 @@
+{
+  "schema": "coal-sensitive-real-case-v1",
+  "roi_id": "100/F007",
+  "core_mm": 100,
+  "material": "BX-2",
+  "spacing_m": 8.703549200000001e-05,
+  "edge_length_mm": 1.74070984,
+  "volume_m3": 5.27447396532582e-09,
+  "voxel_counts": {
+    "0": 99,
+    "5": 197,
+    "6": 74,
+    "7": 67,
+    "1000000": 7563
+  },
+  "reference_stress_MPa": 3.7,
+  "stress_path_MPa": [
+    3.7,
+    5.0,
+    5.25,
+    7.0,
+    7.25,
+    10.0,
+    10.25,
+    15.0,
+    15.75,
+    20.0
+  ],
+  "directions": {
+    "x": [
+      1,
+      0,
+      0
+    ],
+    "y": [
+      0,
+      1,
+      0
+    ],
+    "z": [
+      0,
+      0,
+      1
+    ]
+  },
+  "phases": {
+    "0": {
+      "class": "BX-5",
+      "fracture_id": null,
+      "description": "ordinary background voxels; effective background response"
+    },
+    "1000000": {
+      "class": "BX-5",
+      "fracture_id": null,
+      "description": "unresolved high-gray voxels; assigned the effective background response with no fracture ownership"
+    },
+    "5": {
+      "class": "BX-2",
+      "fracture_id": "F005",
+      "description": "resolved fracture F005 (physical CT fracture identifier 5)"
+    },
+    "6": {
+      "class": "BX-2",
+      "fracture_id": "F006",
+      "description": "resolved fracture F006 (physical CT fracture identifier 6)"
+    },
+    "7": {
+      "class": "BX-2",
+      "fracture_id": "F007",
+      "description": "resolved fracture F007 (physical CT fracture identifier 7)"
+    }
+  },
+  "calibration": {
+    "fracture_area_fraction": 0.01284521736555927,
+    "background_reference_K_mD": 0.4547499294402665,
+    "fracture_reference_K_mD": 21725.981285013204,
+    "contrast": 47775.66719307652
+  },
+  "provenance": {
+    "label_file": "labels.npy",
+    "label_sha256": "44f13279e6e81fec877d0c06d80806ed9a7ad5cd8018c60877adaa6eb4d122ad",
+    "internal_result_sha256": "33d2b7617be48f6e10df731dbe69ef9a3431fa4ccaae4ee4cfed795c2567e0b0",
+    "note": "labels.npy is byte-identical to the label volume used in the internal 212-ROI recomputation (2026-10-08). The result tables in this folder were exported from the internal per-case result file; run_real_cases.py reproduces them with the released code."
+  }
+}

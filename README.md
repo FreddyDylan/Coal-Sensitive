@@ -4,7 +4,7 @@
 
 Coal-Sensitive connects local stress responses to directional permeability through a solved flow field. It represents resolved fractures and effective background pathways in one hydraulic network, updates their conductances with stress, and quantifies each fracture's contribution to the overall sensitivity.
 
-The repository provides a compact Python reference implementation, analytical benchmarks and synthetic three-dimensional examples. The graph solver and the exact voxel face-elimination kernel are carried over from the REV55 research implementation.
+The repository provides a compact Python reference implementation, analytical benchmarks, synthetic three-dimensional examples and two representative field-data cases. The graph solver and the exact voxel face-elimination kernel are carried over from the REV55 research implementation.
 
 ## What the software computes
 
@@ -44,6 +44,8 @@ coal-sensitive example_case.json --output results/series.json
 ```
 
 The example suite writes `results/verification.json`. It includes check outcomes and detailed permeability, derivative, contribution and conservation results. Typical execution of these small cases takes a few seconds on a laptop.
+
+The two field-data cases under [`real_cases/`](real_cases/README.md) are reproduced with `python real_cases/run_real_cases.py --output results --verify`.
 
 ## Model
 
@@ -97,6 +99,10 @@ For the series example at 3.70 MPa, $K_x=2.285714285714286\times10^{-12}$ m² an
 
 The automated suite also checks conservation, the network energy identity, tensor symmetry and positive semidefiniteness, disconnected components, coordinate transformations, one-sided derivatives at response knots, input validation, contribution closure and the command-line interface. Tests use analytical formulas and finite differences as independent references.
 
+## Field-data cases
+
+[`real_cases/`](real_cases/README.md) contains two representative field-data cases selected in the accompanying manuscript — ROI 100/F007 (three resolved fractures) and ROI 60/F039 under BX-2 loading — together with the shared experimental calibration parameters and the endpoint result tables for all 212 CT subvolumes. [`real_cases/run_real_cases.py`](real_cases/run_real_cases.py) rebuilds each case from the released label volume and calibration curves and reproduces the shipped result tables to a worst relative deviation of $1.5\times10^{-11}$. See [`real_cases/README.md`](real_cases/README.md) for case selection, provenance, units and conventions.
+
 ## Using your own data
 
 For an explicit graph, follow [`example_case.json`](example_case.json):
@@ -140,7 +146,7 @@ Supply reviewed segmentation labels, hydraulic priors, response-class assignment
 
 This release implements linear, steady, single-phase flow on fixed geometry during first loading. Stress enters through local conductance functions. Hydraulic priors and the effective-background calibration determine the physical interpretation of the prediction. The representative volume scale must be assessed for each dataset.
 
-The bundled cases verify the numerical method and illustrate how local responses propagate to the sample scale. The research CT volumes, field documents, measured specimen curves and the 212-subvolume manuscript dataset are outside this software release. Reproducing those experimental results requires the corresponding research inputs and provenance records. Unloading, adsorption-induced deformation, evolving topology and multiphase transport require additional constitutive models.
+The bundled cases verify the numerical method and illustrate how local responses propagate to the sample scale. Two representative field-data cases, the experimental calibration parameters and the endpoint result tables supporting the manuscript statistics are included under `real_cases/`; the complete research CT volumes, field documents and specimen records remain outside this release. Unloading, adsorption-induced deformation, evolving topology and multiphase transport require additional constitutive models.
 
 ## Repository contents
 
@@ -151,6 +157,7 @@ The bundled cases verify the numerical method and illustrate how local responses
 | `run_examples.py` | Five runnable synthetic verification cases |
 | `example_case.json` | Explicit series network and first-loading response library |
 | `expected_series.json` | Analytical expected values |
+| `real_cases/` | Two field-data cases, shared calibration parameters and 212-subvolume result tables |
 | `pyproject.toml`, `requirements.txt` | Installation metadata and dependencies |
 | `requirements-macos-py312.txt` | Tested Apple Silicon wheels for Python 3.12 |
 | `VALIDATION.md` | Verification commands and tested environments |
