@@ -1,0 +1,93 @@
+{
+  "schema": "coal-sensitive-case-v1",
+  "data_kind": "synthetic verification case",
+  "reference_MPa": 3.7,
+  "stress_path_MPa": [
+    3.7,
+    7,
+    10,
+    15,
+    20
+  ],
+  "graph": {
+    "coordinates_m": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.02,
+        0,
+        0
+      ],
+      [
+        0.04,
+        0,
+        0
+      ]
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "boundary": [
+      true,
+      false,
+      true
+    ],
+    "g0_m3_Pa_s": [
+      2e-10,
+      5e-10
+    ],
+    "response_classes": [
+      "fracture",
+      "background"
+    ],
+    "fracture_ids": [
+      "F1",
+      null
+    ],
+    "volume_m3": 0.0001,
+    "viscosity_Pa_s": 0.001
+  },
+  "responses": {
+    "fracture": {
+      "stress_MPa": [
+        3.7,
+        10,
+        20
+      ],
+      "permeability": [
+        1.0,
+        0.15107180883637086,
+        0.00752142247499327
+      ]
+    },
+    "background": {
+      "stress_MPa": [
+        3.7,
+        10,
+        20
+      ],
+      "permeability": [
+        1.0,
+        0.5325918010068972,
+        0.19592957412690934
+      ]
+    }
+  },
+  "directions": {
+    "x": [
+      1,
+      0,
+      0
+    ]
+  }
+}
