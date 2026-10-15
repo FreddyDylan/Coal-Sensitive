@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, cite this repository with the version and commit identifier."
+type: software
+title: "Coal-Sensitive: Hydraulic network modelling of coal permeability stress sensitivity"
+authors:
+  - name: "Coal-Sensitive contributors"
+version: 0.1.0
+date-released: 2026-10-15
+repository-code: "https://github.com/FreddyDylan/Coal-Sensitive"
+url: "https://github.com/FreddyDylan/Coal-Sensitive"
+license: MIT
+keywords:
+  - Coal permeability
+  - Stress sensitivity
+  - Fracture network
+  - Permeability upscaling
+  - Computational geosciences
