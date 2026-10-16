@@ -85,7 +85,7 @@ The explicit adapter supports exterior voxels labelled `-1` and voxel spacing in
 
 ## Examples and verification
 
-All bundled numerical inputs are **synthetic** and fully specified in this repository.
+The five verification cases listed below use **synthetic** numerical inputs, fully specified in this repository.
 
 | Case | Independent check | Purpose |
 |---|---|---|
